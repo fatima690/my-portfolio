@@ -36,24 +36,68 @@ function App() {
         <p style={{ fontSize: "22px", fontStyle: "italic" }}>Data Science & Machine Learning | MIAGE Engineering</p>
       </section>
 
-      {/* === À PROPOS === */}
+ {/* === À PROPOS === */}
 <section id="apropos" style={sectionStyle}>
-  <h2 style={{ fontSize: "32px", fontWeight: "bold", marginBottom: "30px", textAlign: "center", color: "#3E2C26" }}>À propos</h2>
-  
-  <div className="profile-container">
-    {/* Texte À propos */}
-    <div className="profile-text">
+  <h2
+    style={{
+      fontSize: "32px",
+      fontWeight: "bold",
+      marginBottom: "30px",
+      textAlign: "center",
+      color: "#3E2C26",
+    }}
+  >
+    À propos
+  </h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-between",
+      gap: "50px",
+      flexWrap: "wrap",
+      alignItems: "center",
+    }}
+  >
+    {/* === TEXTE === */}
+    <div
+      style={{
+        flex: "1 1 400px",
+        textAlign: "left",
+        lineHeight: "1.8",
+        minWidth: "300px",
+      }}
+    >
       <p>Je m'appelle <strong>Fatima Moujahid</strong>, future ingénieure en MIAGE avec un fort intérêt pour la Data et l'IA. Passionnée par la transformation des données en solutions intelligentes, je maîtrise le cycle complet des projets data - de l'analyse prédictive au déploiement d'applications data-driven.</p>
 
       <p>Mon objectif : mettre mes compétences en machine learning, visualisation de données et développement au service de projets innovants qui créent de la valeur grâce à l'intelligence artificielle.</p>
     </div>
-    
-    {/* Photo */}
-    <div className="profile-photo-container">
-      <img 
+
+    {/* === IMAGE === */}
+    <div
+      style={{
+        flex: "1 1 300px",
+        width: "100%",
+        maxWidth: "400px",
+        borderRadius: "10px",
+        overflow: "hidden",
+        boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+        alignSelf: "center",
+        margin: "0 auto",
+      }}
+    >
+      <img
         src={FatimaImage}
         alt="Fatima Moujahid"
-        className="profile-photo"
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+          objectFit: "cover",
+          transition: "transform 0.3s ease",
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       />
     </div>
   </div>
